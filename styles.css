@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap');
+
+body {
+    font-family: "Caveat", cursive;
+    background-color: #f0e6d2;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ghibli-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.floating-petals {
+    position: absolute;
+    background: url('petals.png') no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    animation: petalFloating calc(var(--random-duration) * 10s) linear infinite;
+    top: calc(var(--random-top) * 100%);
+    left: calc(var(--random-left) * 100%);
+}
+
+.floating-petals:nth-child(3n) {
+    width: 30px;
+    height: 30px;
+}
+
+.floating-petals:nth-child(4n) {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes petalFloating {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(300px, 600px) rotate(270deg);
+        opacity: 0;
+    }
+}
+
+@keyframes totoroSway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+
+.ghibli-character {
+    position: fixed;
+    bottom: 20px;
+    z-index: 1;
+}
+
+.ghibli-character.left {
+    left: 20px;
+}
+
+.ghibli-character.right {
+    right: 20px;
+}
+
+.ghibli-character img {
+    width: 150px;
+    animation: totoroSway 2s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+
+.love-note {
+    position: relative;
+    z-index: 1;
+    background-color: #fff0e6;
+    color: #654321;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+    animation: noteAppear 1s ease-out;
+}
+
+
+@keyframes noteAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #c71585;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+

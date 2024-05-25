@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghibli Love Confession</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="ghibli-background">
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-petals"></div> 
+        <div class="floating-petals"></div> 
+        <div class="floating-petals"></div> 
+        <div class="floating-petals"></div> 
+        <div class="floating-petals"></div> 
+
+        <div class="ghibli-character">
+            <img src="pngegg.png" alt="Totoro">
+
+        </div>
+
+        <div class="ghibli-character right">
+            <img src="pngegg.png" alt="Totoro Right">
+        </div>
+
+    </div>
+    <div class="love-note">
+        <h1>To My Dear Classmate</h1>
+        <p>Hii <span style="font-family: 'Pacifico', cursive;">Jessica</span>!</p>
+        <p>ga kerasa udah setahun yaa kita di kelas yang sama. di confession ini dan mungkin kamu juga udah tau, i've been falling in love with you for almost one year. yup, that's right. i fall in love with you not for how you look, just for who you are.</p>
+        <p>maafin aku yang dulu trying to deketin Jessica dan sekali lagi bikin Jessica risih.</p>
+        <p>you are the one that i want. but I know my boundaries and limitations. so just let me admire you until my feelings fade.</p>
+
+        <audio controls autoplay>
+            <source src="L'amore Dice Ciao - Best Part (Looped).mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+          </audio>
+    <audio id="backgroundMusic" loop>
+        <source src="L'amore Dice Ciao - Best Part (Looped).mp3" type="mp3">
+    </audio>
+
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backgroundMusic = document.getElementById('backgroundMusic');
+            backgroundMusic.play();
+
+            const petals = document.querySelectorAll('.floating-petals');
+            petals.forEach(petal => {
+                petal.style.setProperty('--random-top', Math.random());
+                petal.style.setProperty('--random-left', Math.random());
+                petal.style.setProperty('--random-duration', Math.random() * 0.5 + 0.5);
+            });
+        });
+    </script>
+    
+</div>
+</body>
+  
+
+</html>
